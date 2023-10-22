@@ -1,0 +1,5 @@
+{
+    "host": "myhost:8123",
+    "camera_entity": "camera.mycam",
+    "token": "MYTOKEN"
+}

@@ -20,9 +20,12 @@ START_AFTER_H = 8
 STOP_AFTER_H = 20
 INTERVAL_S = ((STOP_AFTER_H - START_AFTER_H) * 60 / 30) * 60
 
-HA_HOST = "MYHOST:8123"
-HA_CAM_ENTITY = "camera.mycam"
-HA_TOKEN = "MYLONGLIVEDTOKEN"
+with open("config.json", "r") as f:
+    ha_config = json.load(f)
+
+HA_HOST = ha_config["host"]
+HA_CAM_ENTITY = ha_config["camera_entity"]
+HA_TOKEN = ha_config["token"]
 
 
 class HaClient:

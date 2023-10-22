@@ -10,7 +10,7 @@ Install ffmpeg static build from https://johnvansickle.com/ffmpeg/ (arm64 for Fr
 
 ## Configure
 
-Edit `HA_HOST`, `HA_CAM_ENTITY`, `HA_TOKEN`
+Create config.json file with long-lived token in same folder
 
 ## Systemd unit file
 
@@ -21,9 +21,9 @@ Description=Timelapse service
 After=syslog.target network.target
 
 [Service]
-WorkingDirectory=/home/ha/timelapse
+WorkingDirectory=/home/ha/home-assistant-camera-timelapse
 Type=exec
-ExecStart=/usr/bin/python3 -u /home/ha/timelapse/timelapse.py
+ExecStart=/usr/bin/python3 -u /home/ha/home-assistant-camera-timelapse/timelapse.py
 
 # Restart script if stopped
 Restart=always
