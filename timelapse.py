@@ -17,7 +17,7 @@ from websocket import (
 # this means 12 hours should be 30 frames
 # meaning one picture every 24 minutes
 START_AFTER_H = 8
-STOP_AFTER_H = 20
+STOP_AFTER_H = 19
 INTERVAL_S = ((STOP_AFTER_H - START_AFTER_H) * 60 / 30) * 60
 
 with open("config.json", "r") as f:
