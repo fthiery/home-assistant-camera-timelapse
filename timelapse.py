@@ -83,10 +83,10 @@ def take_picture():
 print('Starting up')
 while True:
     now_hour = datetime.now().hour
-    if now_hour > START_AFTER_H and now_hour < STOP_AFTER_H:
+    if now_hour >= START_AFTER_H and now_hour < STOP_AFTER_H:
         take_picture()
     else:
-        print(f"Current time {now_hour} not > {START_AFTER_H}h or < {STOP_AFTER_H}, skipping")
+        print(f"Current hour {now_hour} not > {START_AFTER_H}h or < {STOP_AFTER_H}, skipping")
 
     print(f"Sleeping {INTERVAL_S} seconds")
     time.sleep(INTERVAL_S)
